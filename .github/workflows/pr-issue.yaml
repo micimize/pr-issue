@@ -1,0 +1,13 @@
+name: PR Issue Illustration
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cat_files:
+    name: Show the contents of files in the working directory
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cat *
